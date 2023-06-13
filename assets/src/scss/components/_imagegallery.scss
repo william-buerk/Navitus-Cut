@@ -1,0 +1,54 @@
+/* ==========================================================================
+Image GALLERY
+
+- Image Gallery Global Styling
+- Simple Gallery
+- Overlay Gallery
+- Sliding Gallery
+- Sliding with Thumbnail Gallery
+========================================================================== */
+
+
+/* Image Gallery Global Styling */
+.image-gallery {
+	margin:20px 0;
+	padding:15px;
+	border:1px solid #ccc;
+	background-color:#f9f9f9;
+}
+
+.image-gallery__thumbnail {
+	padding:10px;
+}
+
+
+/* Simple Gallery */
+.image-gallery--simple {
+}
+
+
+/* Overlay Gallery */
+.image-gallery--overlay {
+	display:flex;
+	flex-wrap:wrap;
+	align-items: center;
+}
+
+
+/* Rotating Gallery */
+.image-gallery--rotating {
+
+}
+
+
+/* Rotating with Thumbnail Gallery */
+.image-gallery--strip {
+	.image-gallery__thumbnail {
+		a {
+			display:block;
+			height:100px;
+			background-size:cover;
+			background-position:center;
+		}
+	}
+}

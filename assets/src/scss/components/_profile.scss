@@ -1,0 +1,23 @@
+.sf-profile {
+	.sf-profile-avatar {
+		position: relative;
+		display: inline-block;
+		margin-bottom: 10px;
+
+		.glyphicon-remove-sign {
+			position:absolute;
+			top: 5px;
+			right: 5px;
+			text-decoration: none;
+			color: #999;
+			background-color: #fff;
+			border-radius: 50%;
+		}
+	}
+	textarea {
+		min-height: 100px;
+	}
+	.media-object img {
+		max-width: none;
+	}
+}

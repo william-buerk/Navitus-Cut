@@ -1,0 +1,189 @@
+/* ================================================================
+   EXTENDS
+   ================================================================ */
+
+/*  ================================================================
+    List Reset - Example:
+
+    ul {
+        @extend %listreset;
+    }
+    ================================================================ */
+
+%listreset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*  ================================================================
+    CLEARFIX Extend - EXAMPLE:
+
+    div {
+        @extend clearfix;
+    }
+    ================================================================ */
+
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/* ================================================================
+   MIXINS
+   ================================================================ */
+
+/* ================================================================
+   PSUEDO MIXIN - EXAMPLE:
+
+    div::after {
+        @include pseudo;
+        top: -1rem; left: -1rem;
+    }
+   ================================================================ */
+
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+/* ================================================================
+   Text Shorten (Add Ellipsis) - EXAMPLE:
+
+    div {
+        @include text-shorten(500px);
+    }
+   ================================================================ */
+
+@mixin text-shorten($width) {
+    max-width: $truncation-boundary;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ================================================================
+   CSS ARROW - EXAMPLE:
+
+    div {
+        @include arrow(up, 10px, #efefef);
+    }
+   ================================================================ */
+
+@mixin arrow($direction: down, $size: 5px, $color: #555) {
+    width: 0;
+    height: 0;
+    @if ($direction == left) {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+    } @else if ($direction == right) {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+    } @else if ($direction == down) {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+    } @else {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+    }
+}
+
+/* ================================================================
+   Breakpoint mixin
+   ================================================================ */
+
+@mixin breakpoint($point) {
+    @if $point == retina {
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            @content;
+        }
+    }
+    // 16px baseline (256px) s = small
+    @else if $point == s {
+        @media (min-width: $bp-s) {
+            @content;
+        }
+    }
+    // 16px baseline (580px) sw = small-wide
+    @else if $point == sw {
+        @media (min-width: $bp-sw) {
+            @content;
+        }
+    }
+    // 16px baseline (580px - 767px) sw-m = small-wide TO medium
+    @else if $point == sw-m {
+        @media (min-width: $bp-sw) and (max-width: $bp-m) {
+            @content;
+        }
+    }
+    // 16px baseline (256px - 767px) s-m = small TO medium
+    @else if $point == s-m {
+        @media (min-width: $bp-s) and (max-width: $bp-m) {
+            @content;
+        }
+    }
+    // 16px baseline (256px - 959px) s-l = small TO large
+    @else if $point == s-l {
+        @media (min-width: $bp-s) and (max-width: $bp-l) {
+            @content;
+        }
+    } @else if $point == s-xl {
+        @media (min-width: $bp-s) and (max-width: $bp-xl) {
+            @content;
+        }
+    }
+    // 16px baseline (768px) m = medium
+    @else if $point == m {
+        @media (min-width: $bp-m) {
+            @content;
+        }
+    }
+    // 16px baseline (768px - 959px) m-l = medium TO large
+    @else if $point == m-l {
+        @media (min-width: $bp-m) and (max-width: $bp-l) {
+            @content;
+        }
+    }
+    // 16px baseline (768px - 1024px) m-lg = medium TO large
+    @else if $point == m-lg {
+        @media (min-width: $bp-m) and (max-width: $bp-lg) {
+            @content;
+        }
+    }
+    // 16px baseline (768px - 1152) m-l = medium TO xlarge
+    @else if $point == m-xl {
+        @media (min-width: $bp-m) and (max-width: $bp-xl) {
+            @content;
+        }
+    }
+    // 16px baseline (960px) l = large
+    @else if $point == l {
+        @media (min-width: $bp-l) {
+            @content;
+        }
+    }
+    // 16px baseline (1024px) lg = large
+    @else if $point == lg {
+        @media (min-width: $bp-lg) {
+            @content;
+        }
+    }
+    // 16px baseline (1152px) lx = extra large
+    @else if $point == xl {
+        @media (min-width: $bp-xl) {
+            @content;
+        }
+    } @else {
+        @media (min-width: $point) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+/* ================================================================
+   News
+   ================================================================ */
+
+
+/* News Listing */
+.news-listing {
+
+}
+
+.news-listing__list {
+    @extend .item-listing__list;
+}
+
+.news-listing__item {
+    @extend .item-listing__item;
+}
+
+.news-listing__title {
+    @extend .item-listing__title;
+}
+
+.news-listing__summary {
+	@extend .item-listing__summary;
+}
+
+
+/* News Detail */
+.news-detail {
+    @extend .item-detail;
+}
+
+.news-detail__header {
+    @extend .item-detail__header;
+}
+
+.news-detail__title {
+    @extend .item-detail__title;
+}

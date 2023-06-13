@@ -1,0 +1,164 @@
+{% extends "../templates/layout.html" %}
+{% block pagetitle %} Page Index {% endblock %}
+
+{% block content %}
+<style type="text/css">
+	.styleguide-section {
+		padding: 15px 20px;
+		margin: 15px;
+		background: #efefef;
+		border-radius: 15px;
+		border: 3px solid #ddd;
+	}
+
+	.tools-list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		margin-bottom: 30px;
+	}
+
+	.tools-list__section {
+		width: calc(50% - 30px);
+		padding: 15px 20px;
+		margin: 15px;
+		background: #efefef;
+		border-radius: 15px;
+		border: 3px solid #ddd;
+	}
+
+	.tools-list__section ul,
+	.styleguide-section ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+</style>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Page Listings</h1>
+
+
+			<div class="test">
+				<a href="#content" data-toggle data-target="content">Test</a>
+				<div id="content" class="content" style="display:none">Test Content</div>
+			</div>
+
+			<div class="test2">
+				<a href="#content2" data-toggle data-target="content2">Test 2</a>
+				<div id="content2" class="content" style="display:none">Test Content 2</div>
+			</div>
+
+			<div class="test3">
+				<a href="#content3" data-toggle data-target="content3" data-hold>Test 3</a>
+				<div id="content3" class="content" style="display:none">
+					Test Content 3
+					<input type="text" />
+				</div>
+			</div>
+
+			<div class="test3" data-tabs>
+				<ul>
+					<li><a href="#" data-tab data-target="tab-1">Tab 1</a></li>
+					<li><a href="#" class="active" data-tab data-target="tab-2">Tab 2</a></li>
+					<li><a href="#" data-tab data-target="tab-3">Tab 3</a></li>
+				</ul>
+				<div id="tab-1" class="content" style="display:none">
+					Test Tab 1
+					<input type="text" />
+				</div>
+				<div id="tab-2" class="content" style="display:none">
+					Test Tab 2
+					<input type="text" />
+				</div>
+				<div id="tab-3" class="content" style="display:none">
+					Test Tab 3
+					<input type="text" />
+				</div>
+			</div>
+
+			<div class="styleguide-section">
+				<h2>Styleguide</h2>
+				<ul>
+					<li><a href="/styleguide.html">Styleguide</a></li>
+				</ul>
+			</div>
+
+			<div class="tools-list">
+				<div class="tools-list__section">
+					<h2>Basic Pages</h2>
+					<ul>
+						<li><a href="/one-column.html">One Column</a></li>
+						<li><a href="/two-column.html">Two Columns</a></li>
+					</ul>
+				</div>
+
+				<div class="tools-list__section">
+					<h2>News</h2>
+					<ul>
+						<li><a href="/news">News Listing</a></li>
+						<li><a href="/news/detail.html">News Detail</a></li>
+					</ul>
+				</div>
+
+				<div class="tools-list__section">
+					<h2>Events</h2>
+					<ul>
+						<li><a href="/events">Events Listing</a></li>
+						<li><a href="/events/detail.html">Events Detail</a></li>
+					</ul>
+				</div>
+
+				<div class="tools-list__section">
+					<h2>Blogs</h2>
+					<ul>
+						<li><a href="/blogs">Blogs Listing</a></li>
+						<li><a href="/blogs/detail.html">Blogs Detail</a></li>
+					</ul>
+				</div>
+
+				<div class="tools-list__section">
+					<h2>Image Galleries</h2>
+					<ul>
+						<li><a href="/blogs">Image Gallery Detail</a></li>
+						<li><a href="/blogs">Image Gallery</a></li>
+						<li><a href="/blogs">Overlay Gallery</a></li>
+						<li><a href="/blogs/detail.html">Simple List</a></li>
+						<li><a href="/blogs/detail.html">Thumbnail Strip</a></li>
+					</ul>
+				</div>
+
+				<div class="tools-list__section">
+					<h2>Documents</h2>
+					<ul>
+						<li><a href="/blogs">Documents Listing</a></li>
+						<li><a href="/blogs/detail.html">Documents Table</a></li>
+					</ul>
+				</div>
+
+				<div class="tools-list__section">
+					<h2>Lists</h2>
+					<ul>
+						<li><a href="/blogs">List Detail</a></li>
+						<li><a href="/blogs">Anchor List</a></li>
+						<li><a href="/blogs">Expandable List</a></li>
+						<li><a href="/blogs">Expanded List</a></li>
+						<li><a href="/blogs">Pages List</a></li>
+						<li><a href="/blogs">Simple List</a></li>
+					</ul>
+				</div>
+
+				<div class="tools-list__section">
+					<h2>Forms</h2>
+					<ul>
+						<li><a href="/blogs">Blogs Listing</a></li>
+						<li><a href="/blogs/detail.html">Blogs Detail</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

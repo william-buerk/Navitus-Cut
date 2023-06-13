@@ -1,0 +1,22 @@
+{
+    "globals" : {
+        "name" : "all",
+        "bundle" : true,
+        "src" : [
+            "assets/src/js/utilities.js",
+            "assets/src/js/utilities/toggles.js",
+            "assets/src/js/utilities/tabs.js",
+            "assets/src/js/polyfills/iOS.js",
+            "assets/src/js/vendor/clickmenu.js",
+            "assets/src/js/vendor/modaal.js",
+            "assets/src/js/vendor/slick.js",
+            "assets/src/js/vendor/focusOverlay.js",
+            "assets/src/js/components/functions.js"
+        ]
+    },
+    "individuals" : {
+        "src" : [
+            "assets/src/js/components/photogallery.js"
+        ]
+    }
+}

@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block pagetitle %} Two Column Template {% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {% include "../templates/partials/breadcrumbs.html" %}
+
+            <section class="news-listing">
+                <ul class="news-listing__list">
+                    <li class="news-listing__item">
+                        <h2 class="news-listing__title">
+                            <a href="detail.html">News Title</a>
+                        </h2>
+
+                        <div class="news-listing__meta">
+                            <span class="text-muted">
+                                Jan 5, 2020 by John Smith
+                            </span>
+                            <a href="#">4 Comments</a>
+                        </div>
+
+                        <div class="news-listing__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+
+                        <a href="#" class="news-listing__more">Read More</a>
+                    </li>
+                    <li class="news-listing__item">
+                        <h2 class="news-listing__title">
+                            <a href="#">News Title</a>
+                        </h2>
+
+                        <div class="news-listing__meta">
+                            <span class="text-muted">
+                                Jan 5, 2020 by John Smith
+                            </span>
+                            <a href="#">4 Comments</a>
+                        </div>
+
+                        <div class="news-listing__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+
+                        <a href="#" class="news-listing__more">Read More</a>
+                    </li>
+                    <li class="news-listing__item">
+                        <h2 class="news-listing__title">
+                            <a href="#">News Title</a>
+                        </h2>
+
+                        <div class="news-listing__meta">
+                            <span class="text-muted">
+                                Jan 5, 2020 by John Smith
+                            </span>
+                            <a href="#">4 Comments</a>
+                        </div>
+
+                        <div class="news-listing__summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+
+                        <a href="@navigateUrl" class="news-listing__more">Read More</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
+{% endblock %}

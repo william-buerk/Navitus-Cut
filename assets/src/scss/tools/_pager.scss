@@ -1,0 +1,31 @@
+/* ================================================================
+	Pagination
+	================================================================ */
+
+.pagination {
+	@extend %listreset;
+	display: flex;
+
+	a {
+		display: block;
+		padding: 5px 15px;
+		background-color: #eee;
+
+		&:hover,
+		&:focus {
+			background-color: #ddd;
+		}
+	}
+
+	.active {
+		a {
+			background-color: transparent;
+
+			&:hover,
+			&:focus {
+				text-decoration: none;
+				cursor: default;
+			}
+		}
+	}
+}

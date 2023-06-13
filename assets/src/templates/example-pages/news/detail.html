@@ -1,0 +1,36 @@
+{% extends "two-column.html" %}
+
+{% block pagetitle %} News {% endblock %}
+
+{% block subcontent %}
+<article class="news-detail" aria-labelledby="news-title">
+    <header class="news-detail__header">
+        <h1 class="news-detail__title" id="news-title">News Title</h1>
+
+        <time class="news-detail__date" datetime="">Jan 01, 2020</time>
+
+        <div class="news-detail__author">
+            by John Smith
+        </div>
+    </header>
+
+    <div class="news-detail__content">
+        <!--
+        <figure class="news-detail__image">
+            <img src="@Model.Item.Fields.Image.Fields.MediaUrl" alt="@Model.Item.Fields.Image.Fields.AlternativeText" />
+        </figure>
+        -->
+        <div class="news-detail__main-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi justo, imperdiet at hendrerit ac, tempus at nibh.</p>
+            <p>Nullam pharetra massa nec risus feugiat mattis. Vestibulum sit amet tortor in massa viverra ullamcorper a vitae eros. Suspendisse condimentum elit est, quis ultricies ipsum gravida vitae. Sed aliquam metus sed diam pulvinar, sed laoreet nisi porta. Etiam eget nisl tortor. Pellentesque dapibus mi pulvinar augue aliquet porttitor. Nullam sit amet iaculis ante. Duis at libero in massa blandit molestie sit amet eget urna.</p>
+            <p>Proin ornare augue ac dignissim aliquet. Donec arcu purus, venenatis eget imperdiet ac, faucibus a nulla. Vivamus enim metus, tincidunt a volutpat sed, ultricies convallis nulla. Sed sapien neque, iaculis sed efficitur quis, aliquet in ipsum. Vestibulum mollis porta lectus et semper. Cras porttitor, nisi eget iaculis dictum, tortor enim condimentum velit, eu mollis libero nibh ut mi. Aenean vehicula blandit turpis, sed blandit orci placerat non.</p>
+            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam vehicula et purus blandit bibendum. Phasellus sodales magna lectus, vel gravida ipsum aliquam ut. Praesent ut bibendum dolor. Praesent urna nisl, consectetur non sodales vel, pharetra ut diam.</p>
+            <p>Sed consequat, leo in rutrum consectetur, libero odio luctus sapien, cursus eleifend quam justo ut sapien. Vivamus at tempor ligula, at mollis tellus. Fusce tempus mauris ut congue dapibus. Pellentesque faucibus accumsan condimentum. In hac habitasse platea dictumst. Aenean et ipsum purus. Vivamus aliquam, massa a molestie tempor, nisi nisi luctus urna, vel rutrum lorem libero nec ex.</p>
+        </div>
+    </div>
+
+    <footer class="news-detail__footer">
+        <!-- @Html.CommentsList(@Model.Item.DataItem) -->
+    </footer>
+</article>
+{% endblock %}

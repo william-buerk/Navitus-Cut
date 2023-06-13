@@ -1,0 +1,30 @@
+{% extends "two-column.html" %}
+
+{% block pagetitle %} Two Column Template {% endblock %}
+
+{% block subcontent %}
+<article class="blog-post-detail">
+    <header class="blog-post-detail__header">
+        <h1 class="blog-post-detail__title">Blog Title</h1>
+
+        <div class="blog-post-detail__author">
+            by John Smith
+        </div>
+
+        <time class="blog-post-detail__date">Jan 01, 2020</time>
+
+        <!--<div class="blog-post-detail__comment-count">@Html.CommentsCount(string.Empty, @Model.Item.DataItem)</div> -->
+    </header>
+
+    <div class="blog-post-detail__content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mi justo, imperdiet at hendrerit ac, tempus at nibh.</p>
+        <p>Nullam pharetra massa nec risus feugiat mattis. Vestibulum sit amet tortor in massa viverra ullamcorper a vitae eros. Suspendisse condimentum elit est, quis ultricies ipsum gravida vitae. Sed aliquam metus sed diam pulvinar, sed laoreet nisi porta. Etiam eget nisl tortor. Pellentesque dapibus mi pulvinar augue aliquet porttitor. Nullam sit amet iaculis ante. Duis at libero in massa blandit molestie sit amet eget urna.</p>
+        <p>Proin ornare augue ac dignissim aliquet. Donec arcu purus, venenatis eget imperdiet ac, faucibus a nulla. Vivamus enim metus, tincidunt a volutpat sed, ultricies convallis nulla. Sed sapien neque, iaculis sed efficitur quis, aliquet in ipsum. Vestibulum mollis porta lectus et semper. Cras porttitor, nisi eget iaculis dictum, tortor enim condimentum velit, eu mollis libero nibh ut mi. Aenean vehicula blandit turpis, sed blandit orci placerat non.</p>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam vehicula et purus blandit bibendum. Phasellus sodales magna lectus, vel gravida ipsum aliquam ut. Praesent ut bibendum dolor. Praesent urna nisl, consectetur non sodales vel, pharetra ut diam.</p>
+    </div>
+
+    <!--<footer class="blog-post-detail__footer">
+        @Html.CommentsList(@Model.Item.DataItem)
+    </footer>-->
+</article>
+{% endblock %}

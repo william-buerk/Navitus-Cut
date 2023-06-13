@@ -1,0 +1,23 @@
+/* ================================================================
+   Events
+   ================================================================ */
+
+.events-listing {
+
+}
+
+.events-listing__list {
+    @extend .item-listing__list;
+}
+
+.events-listing__item {
+    @extend .item-listing__item;
+}
+
+.events-listing__title {
+    @extend .item-listing__title;
+}
+
+.events-listing__summary {
+	@extend .item-listing__summary;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- Mobile-friendly viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <title>{% block pagetitle %} {% endblock %}</title>
+
+    <!--
+        <link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,700,500' rel='stylesheet' type='text/css'>
+        -->
+
+    <!-- Style sheet link -->
+    <link href="assets/dist/css/critical.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="manifest" href="icons/manifest.json">
+    <meta name="theme-color" content="#009a44" />
+    <link rel="apple-touch-icon" href="icons/android-chrome-256x256.png">
+    <link rel="icon" href="icons/android-chrome-256x256.png">
+</head>
+
+<body>
+    <header class="site-header" id="site-header" role="banner">
+        <div class="svg-legend" aria-hidden="true">
+            <!-- Inline SVG's Here -->
+        </div>
+        <div class="header-inner">
+            <div class="container">
+                <div class="header-top row">
+                    <div class="col-lg-4">
+                        <a href="pages/home.html" class="brand"><img src="assets/dist/images/logo.jpg" alt="AE" /></a>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="site-search"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        {% include "partials/navigation.html" %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="site-main" id="site-main" role="main">
+        {% block content %} {% endblock %}
+    </main>
+
+    <footer class="site-footer" id="site-footer" role="contentinfo">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        Copyright &copy 2021 Americaneagle.com
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="assets/dist/js/all.min.js"></script>
+    <link href="assets/dist/css/main.min.css" rel="stylesheet" type="text/css" />
+    {% block scripts %} {% endblock %}
+</body>
+
+</html>

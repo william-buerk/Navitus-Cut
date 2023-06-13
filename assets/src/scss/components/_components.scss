@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Global Module Classes
+   ========================================================================== */
+
+
+/* Global Listing styles*/
+.item-listing {
+
+}
+
+.item-listing__list {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.item-listing__item {
+	padding-bottom:20px;
+	margin-bottom:20px;
+	border-bottom:1px solid #ccc;
+
+	&:last-child {
+		border-bottom:0;
+	}
+}
+
+.item-listing__title {
+	margin-bottom:0;
+}
+
+.item-listing__summary {
+	padding:20px 0;
+}
+
+
+/* Global Detail styles*/
+.item-detail {
+	padding:20px 0;
+}
+
+.item-detail__header {
+	padding-bottom:20px;
+}
+
+.item-detail__title {
+	margin-bottom:0;
+}
