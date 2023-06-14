@@ -8,7 +8,7 @@ const rename = require('gulp-rename');
 const notify = require('gulp-notify');
 
 // SCSS/CSS Specific Plugins
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
@@ -146,8 +146,8 @@ const jsLint = () => {
 // Image Optimizing
 const imageOptimize = () => {
     return src(paths.imagePath)
-        .pipe(imagemin())
-        .pipe(gulpif(isDev, notify(notifyGeneric)))
+        //.pipe(imagemin())
+        //.pipe(gulpif(isDev, notify(notifyGeneric)))
         .pipe(dest('assets/dist/images'))
         .pipe(gulpif(isTemplate, dest('templates/assets/dist/images')))
 };
