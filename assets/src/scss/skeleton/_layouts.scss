@@ -1,14 +1,12 @@
-
-
 /* ================================================================
      Content Box
      ================================================================ */
 
-     .content-box {
-        padding: 20px;
-        background: $color-primary;
+.content-box {
+  padding: 20px;
+  background: $color-primary;
 
-        &.alt {
-            background: $color-secondary;
-        }
-    }
+  &.alt {
+    background: $color-secondary;
+  }
+}
