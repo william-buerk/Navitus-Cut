@@ -32,6 +32,7 @@
     }
 }
 
+
 /* ================================================================
    MIXINS
    ================================================================ */
@@ -185,5 +186,33 @@
         @media (min-width: $point) {
             @content;
         }
+    }
+}
+
+/* ================================================================
+   rem conversion function
+   ================================================================ */
+
+@function stripUnit($value) {
+    @return $value / ($value * 0 + 1);
+}
+  
+@function rem($pxValue) {
+    @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+
+%title-padding {
+    padding: 0 rem(20px); 
+
+    @include breakpoint(m) {
+        padding: 0;
+    }
+}
+
+%section-padding {
+    padding: rem(50px) rem(20px); 
+
+    @include breakpoint(m) {
+        padding: rem(120px) rem(200px);
     }
 }

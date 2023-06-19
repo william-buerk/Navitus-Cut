@@ -1,0 +1,70 @@
+.title-section {
+
+    @extend %title-padding;
+
+    @include breakpoint(m) {
+        display: flex;
+        gap: rem(55px);
+    }
+
+    &__title {
+        margin: 0;
+
+        color: #FFFFFF;
+        font-family: $font-primary;
+        font-size: rem(25px);
+        font-weight: 700;
+        text-transform: uppercase;
+        text-wrap: balance; // WARNING: NOT FULLY SUPPORTED
+
+        @include breakpoint(m) {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 15%;
+            right: calc(15% + #{rem(45px)});
+
+
+            font-size: rem(36px);
+            
+            // text-align: center;
+        }
+
+        @include breakpoint(xl) {
+            font-size: rem(48px);
+        }
+    }
+
+    &__title-container {
+        position: relative;
+
+        margin: 0 0 rem(20px);
+        padding: rem(13px) rem(20px);
+        border-radius: 0px rem(30px) rem(30px) 0px;
+
+        background-color: $color-primary;
+
+        @include breakpoint(m) {
+            flex-grow: 1;
+
+            margin: 0;
+            padding: rem(20px);
+
+            border-radius: 0px rem(100px) rem(100px) 0px;
+        }
+    }
+
+    &__image {
+        border-radius: rem(50px) 0;
+
+        @include breakpoint(m) {
+            flex-grow: 0;
+            height: rem(250px);
+        }
+
+        @include breakpoint(xl) {
+            // flex-grow: 0;
+            height: rem(400px);
+        }
+    }
+}

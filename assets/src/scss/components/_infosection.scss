@@ -1,0 +1,16 @@
+.info-section {
+
+    @extend %section-padding;
+    padding: ;
+    height: rem(200px);
+
+    background-color: $section-bg-light;
+
+    &--dark {
+        background-color: $section-bg-dark;
+    }
+
+    &--no-padding-left {
+
+    }
+}

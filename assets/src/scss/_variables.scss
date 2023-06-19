@@ -3,16 +3,19 @@
    ================================================================ */
 
 // Color Variables
-$body-bg: #fff;
+$body-bg: #FFFFFF;
+$section-bg-light: #FFFFFF;
+$section-bg-dark: #F8F9FA;
 $color-base: #000;
 $color-invert: #fff;
-$color-primary: #225894;
-$color-secondary: #25afd2;
+$color-primary: #E57025;
+$color-secondary: #326F91;
 
 
 // Typography
-$font-primary: Arial, sans-serif;
-$font-secondary: Tahoma, Geneva, sans-serif;
+$html-font-size: 16px;
+$font-primary: "Open Sans", serif;
+$font-secondary: "Figtree", serif;
 $font-heading: $font-secondary;
 
 $fontWeight-light: 300;
