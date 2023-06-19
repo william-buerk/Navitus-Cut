@@ -1,8 +1,8 @@
 .info-section {
 
     @extend %section-padding;
-    padding: ;
-    height: rem(200px);
+
+    width: 100vw;
 
     background-color: $section-bg-light;
 
@@ -10,7 +10,36 @@
         background-color: $section-bg-dark;
     }
 
-    &--no-padding-left {
+    // &--no-padding-left {
 
+    // }
+
+    &--gap-large {
+        @include breakpoint(m-xl) {
+            gap: 8%;
+        }
+        @include breakpoint(xl) {
+            gap: 14%;
+        }
+    }
+
+    &--desktop-padding-top-200 {
+        @include breakpoint(m) {
+            padding-top: rem(200px);
+        }
+    }
+
+    @include breakpoint(m) {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    &__divider{
+        flex: 1 1 0;
+        
+        &--flex-grow-3-4 {
+            flex-grow: .75;
+        }
     }
 }

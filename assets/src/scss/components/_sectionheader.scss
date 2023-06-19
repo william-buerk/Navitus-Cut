@@ -1,0 +1,49 @@
+.section-header {
+    font-size: rem(30px);
+    margin: 0;
+    padding-left: rem(15px);
+    // line-height: .7;
+
+    // background-color: red;
+
+    border-left-style: solid;
+    border-left-color: $primary-orange;
+    border-left-width: rem(5px);
+
+    @include breakpoint(m-xl) {
+        font-size: rem(40px);
+        border-left-width: rem(8px);
+        padding-left: rem(20px);
+    }
+
+    @include breakpoint(xl) {
+        font-size: rem(50px);
+        border-left-width: rem(8px);
+        padding-left: rem(20px);
+    }
+
+    &__top {
+       font-weight: 500; 
+       font-family: $font-primary;
+       color: $primary-orange;
+    }
+
+    &__bottom {
+        font-weight: 700; 
+        font-family: $font-secondary;
+        color: $primary-blue;
+    }
+
+    &--margin-large {
+
+        margin-bottom: rem(30px);
+
+        @include breakpoint(m-xl) {
+            margin-bottom: rem(70px);
+        }
+
+        @include breakpoint(xl) {
+            margin-bottom: rem(100px);
+        }
+    }
+}

@@ -212,7 +212,11 @@
 %section-padding {
     padding: rem(50px) rem(20px); 
 
-    @include breakpoint(m) {
+    @include breakpoint(m-xl) {
+        padding: rem(120px) rem(75px);
+    }
+
+    @include breakpoint(xl) {
         padding: rem(120px) rem(200px);
     }
 }

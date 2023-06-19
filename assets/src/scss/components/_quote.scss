@@ -1,0 +1,107 @@
+.quote {
+
+    position: relative;
+
+    padding: rem(30px);
+    margin-top: rem(80px);
+    // top: rem(60px);
+    border-radius: rem(50px) 0;
+
+    background-color: $primary-blue;
+
+    font-family: $font-primary;
+    color: #FFFFFF;
+
+    @include breakpoint(m) {
+        flex-basis: 750px;
+        padding: rem(50px);
+        margin-top: 0;
+    }
+
+    &__bubble {
+
+        position: absolute;
+
+        left: 0;
+        top: rem(-60px);
+
+        height: rem(80px);
+        width: rem(80px);
+        
+        border-radius: 50%;
+
+        background-color: $primary-orange;
+
+        @include breakpoint(m) {
+
+            top: rem(-70px);
+
+            height: rem(100px);
+            width: rem(100px);
+        }
+    }
+
+    &__svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        height: 40%;
+
+    }
+
+    &__text {
+        font-size: rem(14px);
+        font-weight: 500;
+
+        @include breakpoint(m-xl) {
+            font-size: rem(16px);
+        }
+
+        @include breakpoint(xl) {
+            font-size: rem(18px);
+        }
+    }
+
+    &__divider {
+        border-top: rem(3px) solid #205574;
+    }
+
+    &__attribution {
+        display: flex;
+        gap: rem(10px);
+        align-items: center;
+    }
+
+    &__image {
+        border-radius: 50%;
+    }
+
+    // &__attribution-text {
+    //     background-color: red;
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-content: center;
+    // }
+
+    &__name {
+        margin: 0;
+
+        font-size: rem(18px);
+        font-weight: 700;
+
+        @include breakpoint(m) {
+            font-size: rem(20px);
+        }
+    }
+
+    &__description {
+        font-size: rem(12px);
+        font-weight: 400;
+
+        @include breakpoint(m) {
+            font-size: rem(16px);
+        }
+    }
+}

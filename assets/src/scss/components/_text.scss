@@ -1,0 +1,48 @@
+.text {
+
+    font-family: $font-primary;
+
+    &__header {
+        font-size: rem(20px);
+        font-weight: 500;
+        margin-bottom: rem(10px);
+
+        @include breakpoint(m-xl) {
+            font-size: rem(28px);
+        }
+
+        @include breakpoint(xl) {
+            font-size: rem(36px);
+        }
+
+        &--orange {
+            color: $primary-orange;
+
+        }
+    }
+
+    &__paragraph {
+        font-size: rem(14px);
+        font-weight: 500;
+
+        @include breakpoint(m-xl) {
+            font-size: rem(16px);
+        }
+
+        @include breakpoint(xl) {
+            font-size: rem(18px);
+        }
+
+        &--orange {
+            color: $primary-orange;
+        }
+
+        &--blue {
+            color: $primary-blue;
+        }
+
+        &--bold {
+            font-weight: 700;
+        }
+    }
+}
