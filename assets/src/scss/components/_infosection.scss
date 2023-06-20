@@ -6,13 +6,55 @@
 
     background-color: $section-bg-light;
 
+    // @include breakpoint(m) {
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: start;
+    // }
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+    @include breakpoint(m) {
+        flex-direction: row;
+        align-items: start;
+    }
+
+    &--desktop-wrap {
+        @include breakpoint(m) {
+            flex-wrap: wrap;
+        }
+    }
+
     &--dark {
         background-color: $section-bg-dark;
+    }
+
+    &--center-vertical {
+        @include breakpoint(m) {
+            align-items: center;
+        }
+    }
+
+    &--vertical-gap {
+        //Medium screens and lower
+        @media (max-width: rem(767px)) {
+            gap: rem(30px);
+        }
+
     }
 
     // &--no-padding-left {
 
     // }
+    &--gap-small {
+        @include breakpoint(m) {
+            gap: rem(20px);
+        }
+    }
 
     &--gap-large {
         @include breakpoint(m-xl) {
@@ -29,17 +71,77 @@
         }
     }
 
-    @include breakpoint(m) {
-        display: flex;
-        justify-content: space-between;
-        align-items: start;
+    &--desktop-padding-right-only {
+        @include breakpoint(m) {
+            padding-left: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
     }
 
-    &__divider{
-        flex: 1 1 0;
+    &--no-desktop-padding-right {
+        @include breakpoint(m) {
+            padding-right: 0;
+        }
+    }
+
+    &__divider {
+
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: rem(0px);
         
+        // background-color: red;
+
+        // Center content in divider
+        &--center {
+            display: flex;
+            justify-content: center;
+        }
+
         &--flex-grow-3-4 {
             flex-grow: .75;
+        }
+
+        &--flex-basis-300 {
+            @include breakpoint(m){
+                flex-basis: rem(300px);
+            }
+        }
+
+        &--padding-left-10 {
+            @include breakpoint(m){
+                padding-left:rem(10px);
+            }
+        }
+
+    }
+
+    &__image {
+        // &--desktop-display-block {
+        //     @include breakpoint(m) {
+        //         display:block;
+        //     }
+        // }
+
+        &--width-standard {
+
+            @include breakpoint(m-xl) {
+                width: rem(400px);
+            }
+
+            @include breakpoint(xl) {
+                width: rem(693px);
+            }
+        }
+
+        &--border-curve-top-left-bottom-right {
+
+            border-radius: rem(50px) 0;
+
+            @include breakpoint(m) {
+                border-radius: rem(100px) 0;
+            }
         }
     }
 }

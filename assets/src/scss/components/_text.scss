@@ -19,6 +19,23 @@
             color: $primary-orange;
 
         }
+
+        &--bold {
+            font-weight: 700;
+        }
+
+        &--desktop-size-25 {
+            font-size: rem(18px);
+
+            @include breakpoint(m-xl) {
+                font-size: rem(20px);
+            }
+
+            @include breakpoint(xl) {
+                font-size: rem(25px);
+            }
+        }
+
     }
 
     &__paragraph {
@@ -41,8 +58,65 @@
             color: $primary-blue;
         }
 
+        &--gray {
+            color: $primary-gray;
+        }
+
+        &--small {
+            font-size: rem(10px);
+
+            @include breakpoint(m-xl) {
+                font-size: rem(11px);
+            }
+
+            @include breakpoint(xl) {
+                font-size: rem(12px);
+            }
+        }
+
         &--bold {
             font-weight: 700;
+        }
+    }
+
+    &__list {
+        
+        padding: 0;
+
+        font-size: rem(14px);
+        font-weight: 500;
+        line-height: 130%;
+
+        @include breakpoint(m-xl) {
+            font-size: rem(16px);
+        }
+
+        @include breakpoint(xl) {
+            font-size: rem(18px);
+        }
+
+        &--gray {
+            color: $primary-gray;
+        }
+
+        &--bold {
+            font-weight: 700;
+        }
+    }
+
+    &__list-item {
+        margin: 0;
+        margin-left: rem(25px);
+        margin-bottom: rem(15px);
+        
+        @include breakpoint(m-xl) {
+            margin-bottom: rem(20px);
+            margin-left: rem(30px);
+        }
+
+        @include breakpoint(xl) {
+            margin-bottom: rem(25px);
+            margin-left: rem(35px);
         }
     }
 }

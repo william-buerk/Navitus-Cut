@@ -1,0 +1,76 @@
+.data-point {
+
+    padding-bottom: rem(10px);
+
+    background-color: $primary-orange;
+    border-radius: 0 0 rem(10px) rem(10px);
+
+    font-family: $font-secondary;
+
+    @include breakpoint(m) {
+        padding-bottom: rem(20px);
+    }
+
+    &--desktop-width-275 {
+
+        @include breakpoint(m) {
+            width: rem(210px);
+        }
+
+        @include breakpoint(xl) {
+            width:rem(275px);
+        }
+    }
+
+    &__inner {
+
+        margin-bottom: 0;
+
+        &--dark {
+            background-color: $section-bg-dark;
+        }
+    }
+
+    &__data {
+        
+        margin-bottom: 0;
+
+        text-align: right;
+        font-size: rem(80px);
+        font-weight: 900;
+        line-height: rem(80px);
+        color: $primary-orange;
+
+
+        @include breakpoint(m) {
+            font-size: rem(90px);
+            line-height: rem(90px);
+        }
+
+        @include breakpoint(xl) {
+            font-size: rem(100px);
+            line-height: rem(100px);
+        }
+
+    }
+
+    &__description{
+
+        margin-bottom: 0;
+
+        font-size: rem(20px);
+        font-weight: 700;
+        line-height: 130%;
+        color: $primary-blue;
+        text-align: right;
+
+
+        @include breakpoint(m) {
+            font-size: rem(25px);
+        }
+
+        @include breakpoint(xl) {
+            font-size: rem(30px);
+        }
+    }
+}
