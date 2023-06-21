@@ -1,0 +1,122 @@
+$item-container-gap: rem(30px);
+
+.summary-form {
+
+    padding: rem(30px) rem(20px);
+    
+    border-radius: 0 rem(50px) rem(50px) 0;
+    background-color: $primary-orange;
+
+    color: #FFFFFF;
+    font-family: $font-primary;
+    text-align: center;
+
+    @include breakpoint(m) {
+
+        padding: rem(100px) clamp(#{rem(100px)}, 10vw, #{rem(200px)});
+
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+
+        border-radius: 0 rem(100px) rem(100px) 0;
+    }
+
+    &__header {
+
+        margin-bottom: rem(30px);
+
+        white-space: normal;
+        font-size: rem(22px);
+        font-family: $font-primary;
+
+        @include breakpoint(m) {
+            // font-size: rem(38px);
+            font-size: clamp(#{rem(22px)}, 2vw, #{rem(38px)});
+        }
+    }
+
+    &__description {
+        margin-bottom: rem(30px);
+        font-size: rem(14px);
+        font-weight: 500;
+
+        @include breakpoint(m) {
+            margin-bottom: rem(30px);
+            font-size: rem(18px);
+        }
+    }
+
+    &__item-container {
+
+        margin-bottom: rem(20px);
+
+        display: flex;
+        gap: rem(20px);
+        flex-wrap: wrap;
+        align-items: end;
+        justify-content: space-between;
+
+        @include breakpoint(m) {
+            margin-bottom: rem(40px);
+
+            gap: $item-container-gap;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+        
+        @include breakpoint(m) {
+            width: calc(50% - #{$item-container-gap});
+        }
+    }
+
+    &__label {
+
+        margin-bottom: rem(10px);
+
+        font-size: rem(14px);
+        font-weight: 700;
+        text-align: left;
+
+        @include breakpoint(m) {
+            font-size: rem(16px);
+        }
+    }
+
+    &__input {
+
+        padding: rem(20px);
+
+        border-radius: rem(5px);
+        border-style: none;
+
+        font-size: rem(12px);
+        font-weight: 500;
+        color: $primary-gray;
+
+        @include breakpoint(m) {
+            font-size: rem(14px);
+        }
+    }
+
+    &__submit {
+        width: 100%;
+        padding: rem(20px) 0;
+
+        background-color: $primary-blue;
+
+        color: #FFFFFF;
+        font-size: rem(14px);
+        font-weight: 700;
+
+        border-style: none;
+        border-radius: rem(5px);
+
+    }
+    
+}
