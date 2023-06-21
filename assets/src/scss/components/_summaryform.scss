@@ -1,4 +1,4 @@
-$item-container-gap: rem(30px);
+$item-container-gap: 30;
 
 .summary-form {
 
@@ -64,7 +64,7 @@ $item-container-gap: rem(30px);
         @include breakpoint(xl) {
             margin-bottom: rem(40px);
 
-            gap: $item-container-gap;
+            gap: rem($item-container-gap);
         }
     }
 
@@ -75,7 +75,7 @@ $item-container-gap: rem(30px);
         
         
         @include breakpoint(m) {
-            width: calc(50% - #{$item-container-gap});
+            width: calc(50% - #{rem($item-container-gap * 0.5)});
         }
     }
 
