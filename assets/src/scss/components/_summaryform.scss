@@ -16,10 +16,15 @@ $item-container-gap: rem(30px);
         padding: rem(100px) clamp(#{rem(100px)}, 10vw, #{rem(200px)});
 
         flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 0;
+        flex-shrink: 0;
+        flex-basis: rem(600px);
 
         border-radius: 0 rem(100px) rem(100px) 0;
+    }
+
+    // WARNING: Bad solution to adding margin to form when wrapping, should try to fix
+    @media (min-width: #{$bp-m}) and (max-width: #{rem(1490px)}) {
+        margin-right: rem(30px);
     }
 
     &__header {
@@ -31,7 +36,6 @@ $item-container-gap: rem(30px);
         font-family: $font-primary;
 
         @include breakpoint(m) {
-            // font-size: rem(38px);
             font-size: clamp(#{rem(22px)}, 2vw, #{rem(38px)});
         }
     }
@@ -41,7 +45,7 @@ $item-container-gap: rem(30px);
         font-size: rem(14px);
         font-weight: 500;
 
-        @include breakpoint(m) {
+        @include breakpoint(xl) {
             margin-bottom: rem(30px);
             font-size: rem(18px);
         }
@@ -57,7 +61,7 @@ $item-container-gap: rem(30px);
         align-items: end;
         justify-content: space-between;
 
-        @include breakpoint(m) {
+        @include breakpoint(xl) {
             margin-bottom: rem(40px);
 
             gap: $item-container-gap;
@@ -99,7 +103,7 @@ $item-container-gap: rem(30px);
         font-weight: 500;
         color: $primary-gray;
 
-        @include breakpoint(m) {
+        @include breakpoint(xl) {
             font-size: rem(14px);
         }
     }
