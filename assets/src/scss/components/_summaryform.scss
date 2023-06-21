@@ -58,7 +58,7 @@ $item-container-gap: 30;
         display: flex;
         gap: rem(20px);
         flex-wrap: wrap;
-        align-items: end;
+        align-items: flex-end;
         justify-content: space-between;
 
         @include breakpoint(xl) {
