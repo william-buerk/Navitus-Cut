@@ -1,0 +1,46 @@
+.big-text {
+    position: relative;
+    width: 100%;
+    border-radius: rem(25px);
+    padding: rem(25px);
+    margin-bottom: rem(90px);
+
+    background-color: $primary-blue;
+    
+    @include breakpoint(m) {
+        border-radius: rem(50px);
+        padding: rem(50px);
+        margin-bottom: rem(180px);
+        white-space: nowrap;
+    }
+    
+
+    &__header {
+
+        margin: 0;
+
+        font-size: rem(26px);
+        font-weight: 800;
+        line-height: 130%;
+        font-family: $font-secondary;
+        color: #FFFFFF;
+
+        @include breakpoint(m) {
+            // font-size: 50px;
+            font-size: clamp(#{rem(26px)}, 3vw, #{rem(50px)});
+        }
+    }
+
+    &__image {
+        position: absolute;
+        height: rem(100px);
+        bottom: rem(-90px);
+        right: 0;
+
+        @include breakpoint(m){
+            height: rem(200px);
+            bottom: rem(-180px);
+        }
+    }
+    
+}

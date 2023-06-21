@@ -34,6 +34,19 @@
         color: $primary-blue;
     }
 
+    &--margin-small {
+
+        margin-bottom: rem(30px);
+
+        @include breakpoint(m-xl) {
+            margin-bottom: rem(40px);
+        }
+
+        @include breakpoint(xl) {
+            margin-bottom: rem(50px);
+        }
+    }
+
     &--margin-large {
 
         margin-bottom: rem(30px);

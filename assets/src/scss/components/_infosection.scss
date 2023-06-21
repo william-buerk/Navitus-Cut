@@ -40,6 +40,12 @@
         }
     }
 
+    &--desktop-center-horizontal {
+        @include breakpoint(m) {
+            justify-content: center;
+        }
+    }
+
     &--vertical-gap {
         //Medium screens and lower
         @media (max-width: rem(767px)) {

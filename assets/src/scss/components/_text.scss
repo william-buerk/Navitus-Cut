@@ -79,6 +79,24 @@
         }
     }
 
+    &__span {
+        &--orange {
+            color: $primary-orange;
+        }
+
+        &--blue {
+            color: $primary-blue;
+        }
+
+        &--gray {
+            color: $primary-gray;
+        }
+
+        &--bold {
+            font-weight: 700;
+        }
+    }
+
     &__list {
         
         padding: 0;
@@ -119,4 +137,6 @@
             margin-left: rem(35px);
         }
     }
+
+
 }
