@@ -22,12 +22,27 @@
         }
     }
 
+    &--desktop-width-320 {
+
+        @include breakpoint(m) {
+            width: rem(320px);
+        }
+
+        // @include breakpoint(xl) {
+        //     width:rem(275px);
+        // }
+    }
+
     &__inner {
 
         margin-bottom: 0;
 
         &--dark {
             background-color: $section-bg-dark;
+        }
+
+        &--light {
+            background-color: $section-bg-light;
         }
     }
 
@@ -71,6 +86,10 @@
 
         @include breakpoint(xl) {
             font-size: rem(30px);
+        }
+
+        &--center {
+            text-align: center;
         }
     }
 }

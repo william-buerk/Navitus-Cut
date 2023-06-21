@@ -3,6 +3,7 @@
     @extend %section-padding;
 
     width: 100vw;
+    min-width: 400px;
 
     background-color: $section-bg-light;
 
@@ -56,6 +57,15 @@
         }
     }
 
+    &--gap-medium {
+        @include breakpoint(m-xl) {
+            gap: 4%;
+        }
+        @include breakpoint(xl) {
+            gap: 7%;
+        }
+    }
+
     &--gap-large {
         @include breakpoint(m-xl) {
             gap: 8%;
@@ -87,16 +97,31 @@
 
     &__divider {
 
+        // background-color: pink;
+
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: rem(0px);
+        // flex-basis: 0;
         
-        // background-color: red;
+        // background-color: pink;
 
         // Center content in divider
         &--center {
             display: flex;
+            // flex-direction: column;
             justify-content: center;
+        }
+
+        &--center-horizontally {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &--flex-grow-0 {
+            // background-color: red;
+            flex-grow: 0;
         }
 
         &--flex-grow-3-4 {
@@ -109,11 +134,23 @@
             }
         }
 
+        &--desktop-margin-bottom-20 {
+            @include breakpoint(m) {
+                margin-bottom: rem(20px);
+            }
+        }
+
         &--padding-left-10 {
             @include breakpoint(m){
                 padding-left:rem(10px);
             }
         }
+
+        &--padding-right-10 {
+            @include breakpoint(m){
+                padding-right:rem(10px);
+            }
+        }        
 
     }
 
@@ -135,6 +172,13 @@
             }
         }
 
+        &--width-standard-desktop-shrink {
+
+            @include breakpoint(m) {
+                width: rem(693px);
+            }
+        }
+
         &--border-curve-top-left-bottom-right {
 
             border-radius: rem(50px) 0;
@@ -142,6 +186,10 @@
             @include breakpoint(m) {
                 border-radius: rem(100px) 0;
             }
+        }
+
+        &--margin-auto {
+            margin: 0 auto;
         }
     }
 }

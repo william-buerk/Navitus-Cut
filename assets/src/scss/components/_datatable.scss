@@ -1,0 +1,111 @@
+.data-table {
+
+    font-family: $font-secondary;
+    font-size: rem(16px);
+    font-weight: 800;
+    color: $primary-blue;
+
+    @include breakpoint(m) {
+        font-size: rem(18px);
+    }
+
+    th {
+        text-align: center;
+        font-weight: 800;
+    }
+
+    &__title {
+
+        margin-bottom: 0;
+
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: rem(18px);
+        color: $primary-orange;
+
+        @include breakpoint(m) {
+            font-size: rem(20px);
+        }
+    }
+
+    &__table {
+        // border-radius: rem(20px);
+        border-spacing: 0 rem(10px);
+        margin: 0;
+
+        width: 100%;
+
+        @include breakpoint(m) {
+
+            width: rem(400px);
+        }
+    }
+
+    &__header, &__data {
+        // border: 0;
+        // border: 1px solid black;
+        // border-spacing: 0 rem(15px); 
+        background-color: #E6E7E8;
+        padding: rem(5px) rem(30px);
+
+        &--top-left {
+            border-top-left-radius: rem(20px);
+        }
+
+        &--top-right {
+            border-top-right-radius: rem(20px);
+        }
+
+        &--bottom-left {
+            border-bottom-left-radius: rem(20px);
+        }
+
+        &--bottom-right {
+            border-bottom-right-radius: rem(20px);
+        }
+
+        // &--first-col {
+        //     text-align: left;
+        //     padding-left: rem(30px);
+        // }
+    }
+
+    &__row{
+
+        th {
+            &:first-child {
+                text-align: left;
+                // padding-left: rem(30px);
+            }
+        }
+
+        &--first {
+            font-size: rem(18px);
+            color: white;
+
+            @include breakpoint(m) {
+                font-size: rem(20px);
+            }
+
+            td, th {
+                background-color: $primary-blue;
+            }
+        }
+
+        &--last {
+            font-size: rem(18px);
+            color: white;
+
+            @include breakpoint(m) {
+                font-size: rem(20px);
+            }
+
+            td, th {
+                background-color: $primary-orange;
+            }
+        }
+
+
+    }
+
+}
