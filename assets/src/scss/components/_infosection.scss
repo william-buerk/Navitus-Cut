@@ -54,7 +54,7 @@
 
     &--vertical-gap {
         //Medium screens and lower
-        @media (max-width: rem(767px)) {
+        @media (max-width: $bp-sw-max {
             gap: rem(30px);
         }
 
@@ -118,6 +118,12 @@
     &--no-desktop-padding-right {
         @include breakpoint(m) {
             padding-right: 0;
+        }
+    }
+
+    &--mobile-align-left {
+        @media (max-width: $bp-sw-max) {
+            align-items: start;
         }
     }
 
@@ -238,6 +244,14 @@
 
         &--margin-auto {
             margin: 0 auto;
+        }
+
+        &--svg-small {
+            height: rem(100px);
+
+            @include breakpoint(m) {
+               height: rem(200px); 
+            }
         }
     }
 }
