@@ -3,8 +3,13 @@
      ================================================================ */
 
 .site-footer {
-  padding: 15px 0;
-  background-color: red;
+  padding: rem(30px) 0;
+  background-color: $primary-blue;
+  color: #FFFFFF;
+
+  @include breakpoint(m) {
+    padding: rem(100px) 0;
+  }
 }
 
 .site-footer-top {

@@ -54,7 +54,7 @@
 
     &--vertical-gap {
         //Medium screens and lower
-        @media (max-width: $bp-sw-max {
+        @media (max-width: $bp-sw-max) {
             gap: rem(30px);
         }
 
