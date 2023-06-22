@@ -167,6 +167,10 @@
             }
         }
 
+        &--margin-auto {
+            margin: 0 auto;
+        }
+
         &--desktop-margin-bottom-20 {
             @include breakpoint(m) {
                 margin-bottom: rem(20px);
@@ -183,7 +187,7 @@
             @include breakpoint(m){
                 padding-right:rem(10px);
             }
-        }        
+        }       
 
     }
 
