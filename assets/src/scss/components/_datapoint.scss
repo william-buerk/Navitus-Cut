@@ -6,9 +6,11 @@
     border-radius: 0 0 rem(10px) rem(10px);
 
     font-family: $font-secondary;
+    max-width: rem(300px);
 
     @include breakpoint(m) {
         padding-bottom: rem(20px);
+        max-width: none;
     }
 
     &--desktop-width-275 {
