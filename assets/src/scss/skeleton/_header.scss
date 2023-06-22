@@ -47,6 +47,14 @@
                position: static;
                flex-direction: row;
           }
+
+          &--mobile-closed {
+               display: none;
+
+               @include breakpoint(xl) {
+                    display: flex;
+               }
+          }
      }
 
      &__link {
