@@ -4,7 +4,6 @@
 
     padding: rem(30px);
     margin-top: rem(80px);
-    // top: rem(60px);
     border-radius: rem(50px) 0;
 
     background-color: $primary-blue;
@@ -77,13 +76,6 @@
     &__image {
         border-radius: 50%;
     }
-
-    // &__attribution-text {
-    //     background-color: red;
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-content: center;
-    // }
 
     &__name {
         margin: 0;

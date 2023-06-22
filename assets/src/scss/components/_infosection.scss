@@ -8,12 +8,6 @@
 
     background-color: $section-bg-light;
 
-    // @include breakpoint(m) {
-    //     display: flex;
-    //     justify-content: space-between;
-    //     align-items: start;
-    // }
-
 
     display: flex;
     justify-content: space-between;
@@ -61,9 +55,6 @@
 
     }
 
-    // &--no-padding-left {
-
-    // }
     &--gap-small {
         @include breakpoint(m) {
             gap: rem(20px);
@@ -130,19 +121,13 @@
 
     &__divider {
 
-        // background-color: pink;
-
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: rem(0px);
-        // flex-basis: 0;
-        
-        // background-color: pink;
 
         // Center content in divider
         &--center {
             display: flex;
-            // flex-direction: column;
             justify-content: center;
         }
 
@@ -153,7 +138,6 @@
         }
 
         &--flex-grow-0 {
-            // background-color: red;
             flex-grow: 0;
         }
 
@@ -192,13 +176,6 @@
     }
 
     &__image {
-        // &--desktop-display-block {
-        //     @include breakpoint(m) {
-        //         display:block;
-        //     }
-        // }
-
-        // width: auto;
 
         &--width-standard {
 

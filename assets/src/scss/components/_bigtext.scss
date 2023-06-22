@@ -26,7 +26,6 @@
         color: #FFFFFF;
 
         @include breakpoint(m) {
-            // font-size: 50px;
             font-size: clamp(#{rem(26px)}, 3vw, #{rem(50px)});
         }
     }

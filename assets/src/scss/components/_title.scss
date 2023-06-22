@@ -27,7 +27,6 @@
 
             font-size: rem(36px);
             
-            // text-align: center;
         }
 
         @include breakpoint(xl) {
@@ -63,7 +62,6 @@
         }
 
         @include breakpoint(xl) {
-            // flex-grow: 0;
             height: rem(400px);
         }
     }

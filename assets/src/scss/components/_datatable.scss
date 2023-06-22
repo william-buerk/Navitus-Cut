@@ -29,7 +29,6 @@
     }
 
     &__table {
-        // border-radius: rem(20px);
         border-spacing: 0 rem(10px);
         margin: 0;
 
@@ -42,9 +41,6 @@
     }
 
     &__header, &__data {
-        // border: 0;
-        // border: 1px solid black;
-        // border-spacing: 0 rem(15px); 
         background-color: #E6E7E8;
         padding: rem(5px) rem(30px);
 
@@ -64,10 +60,6 @@
             border-bottom-right-radius: rem(20px);
         }
 
-        // &--first-col {
-        //     text-align: left;
-        //     padding-left: rem(30px);
-        // }
     }
 
     &__row{
@@ -75,7 +67,6 @@
         th {
             &:first-child {
                 text-align: left;
-                // padding-left: rem(30px);
             }
         }
 
