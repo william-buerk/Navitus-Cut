@@ -28,25 +28,30 @@ $item-container-gap: 30;
     }
 
     &__header {
+        // background-color: blue;
 
         margin-bottom: rem(30px);
 
         white-space: normal;
         font-size: rem(22px);
+        line-height: 130%;
         font-family: $font-primary;
 
         @include breakpoint(m) {
             font-size: clamp(#{rem(22px)}, 2vw, #{rem(38px)});
+            margin-bottom: rem(14px);
         }
     }
 
     &__description {
+        // background-color: blue;
+
         margin-bottom: rem(30px);
         font-size: rem(14px);
         font-weight: 500;
 
         @include breakpoint(xl) {
-            margin-bottom: rem(30px);
+            margin-bottom: rem(41px);
             font-size: rem(18px);
         }
     }
@@ -84,17 +89,19 @@ $item-container-gap: 30;
         margin-bottom: rem(10px);
 
         font-size: rem(14px);
+        line-height: rem(14px);
         font-weight: 700;
         text-align: left;
 
         @include breakpoint(m) {
             font-size: rem(16px);
+            line-height: rem(16px);
         }
     }
 
     &__input {
 
-        padding: rem(20px);
+        padding: rem(17px);
 
         border-radius: rem(5px);
         border-style: none;
@@ -110,7 +117,7 @@ $item-container-gap: 30;
 
     &__submit {
         width: 100%;
-        padding: rem(20px) 0;
+        padding: rem(18px) 0;
 
         background-color: $primary-blue;
 
@@ -121,6 +128,13 @@ $item-container-gap: 30;
         border-style: none;
         border-radius: rem(5px);
 
+    }
+
+    &__download-svg {
+        position: relative;
+        height: rem(14px);
+        top: rem(-1px);
+        left: rem(5px);
     }
     
 }
