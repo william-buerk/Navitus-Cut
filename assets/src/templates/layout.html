@@ -25,26 +25,28 @@
 
 <body>
     <header class="site-header" id="site-header" role="banner">
-        <div class="svg-legend" aria-hidden="true">
-            <!-- Inline SVG's Here -->
-        </div>
-        <div class="header-inner">
-            <div class="container">
-                <div class="header-top row">
-                    <div class="col-lg-4">
-                        <a href="pages/home.html" class="brand"><img src="assets/dist/images/logo.jpg" alt="AE" /></a>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="site-search"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        {% include "partials/navigation.html" %}
-                    </div>
-                </div>
-            </div>
-        </div>
+        <img class="site-header__logo" src="assets/dist/images/navitus.png"/>
+        <img class="site-header__menu" src="assets/dist/images/menu.svg" />
+        <ul class="site-header__link-container">
+            <li class="site-header__link">
+                <a href="">2022 SNAPSHOT</a>
+            </li>
+            <li class="site-header__link">
+                <a href="">SPECIALTY</a>
+            </li>
+            <li class="site-header__link">
+                <a href="">NON-SPECIALTY</a>
+            </li>
+            <li class="site-header__link">
+                <a href="">EPIPHANYRX</a>
+            </li>
+            <li class="site-header__link">
+                <a href="">CLIENT OUTCOMES</a>
+            </li>
+            <li class="site-header__link">
+                <a href="">LEARN MORE</a>
+            </li>
+        </ul>
     </header>
 
     <main class="site-main" id="site-main" role="main">

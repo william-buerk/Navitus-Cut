@@ -3,10 +3,63 @@
    ================================================================ */
 
 .site-header {
-     padding: 15px 0;
-}
+     position: sticky;
+     top: 0;
+     z-index: 1;
+     padding: rem(15px) rem(20px);
 
-.site-logo {
-     display: block;
-     margin-bottom: 15px;
+
+     display: flex;
+     justify-content: space-between;
+
+
+     background-color: #FFFFFF;
+
+     @include breakpoint(m) {
+          padding: rem(22.5px) rem(50px);
+     }
+
+     &__logo {
+          height: rem(20px);
+
+          @include breakpoint(m) {
+               height: rem(30px);
+          }
+     }
+
+     &__link-container {
+          @extend %listreset;
+
+          position: absolute;
+          top: 100%;
+          right: rem(0px);
+          padding: rem(20px);
+
+          display: flex;
+          flex-direction: column;
+          gap: rem(30px);
+
+          background-color: #FFFFFF;
+
+          @include breakpoint(xl) {
+               padding: 0;
+
+               position: static;
+               flex-direction: row;
+          }
+     }
+
+     &__link {
+          font-family: $font-primary;
+          font-weight: 700;
+          font-size: rem(16px);
+     }
+
+     &__menu {
+          width: rem(30px);
+
+          @include breakpoint(xl) {
+               display: none;
+          }
+     }
 }
